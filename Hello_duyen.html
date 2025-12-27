@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>duyen's World</title>
+    <style>
+        body { 
+            margin: 0; 
+            padding: 0; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            min-height: 100vh; 
+            /* Màu nền hồng đỏ ngọt ngào */
+            background: linear-gradient(180deg, #ff9a9e 0%, #fecfef 100%); 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .glass-menu { 
+            background: rgba(255, 255, 255, 0.7); 
+            backdrop-filter: blur(10px); 
+            border-radius: 30px; 
+            padding: 30px; 
+            border: 2px solid #ffffff; 
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3); 
+            text-align: center; 
+            width: 85%;
+            max-width: 350px;
+            z-index: 100;
+        }
+
+        h1 { color: #d81b60; font-size: 24px; margin-bottom: 25px; font-weight: bold; }
+
+        .btn { 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px; 
+            margin: 15px 0; 
+            background: white; 
+            color: #e91e63; 
+            text-decoration: none; 
+            border-radius: 15px; 
+            font-weight: 600; 
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .btn:hover { 
+            transform: scale(1.03); 
+            background: #ffe4e1;
+        }
+
+        /* Hiệu ứng rơi */
+        .falling-item {
+            position: fixed;
+            top: -50px;
+            z-index: 1;
+            user-select: none;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="glass-menu">
+        <h1>🐾 WELCOME TO ME 🌸</h1>
+        <a href="thong-tin.html" class="btn">👋Thông tin cá nhân</a>
+        <a href="so-thich.html" class="btn">❤️ Sở Thích</a>
+        <a href="uoc-mo.html" class="btn">🌟 Ước Mơ & Định hướng tương lai </a>
+    </div>
+
+    <script>
+        function createFallingItem() {
+            const items = ['🐱', '🐾', '🌸', '🎀', '💗'];
+            const container = document.body;
+            const item = document.createElement('div');
+            
+            item.className = 'falling-item';
+            item.innerText = items[Math.floor(Math.random() * items.length)];
+            
+            // Ngẫu nhiên vị trí và tốc độ
+            item.style.left = Math.random() * 100 + 'vw';
+            item.style.fontSize = Math.random() * 20 + 20 + 'px';
+            item.style.animationDuration = Math.random() * 3 + 4 + 's';
+            item.style.opacity = Math.random();
+
+            container.appendChild(item);
+
+            // Xóa để nhẹ máy
+            setTimeout(() => { item.remove(); }, 7000);
+        }
+
+        // Cứ mỗi 0.5 giây tạo 1 cái mới
+        setInterval(createFallingItem, 300);
+    </script>
+</body>
+</html>
