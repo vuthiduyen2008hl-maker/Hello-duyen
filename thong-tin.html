@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vũ Thị Duyên - Profile</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+            color: #444;
+            background: linear-gradient(180deg, #ffc2d1 0%, #ff99ac 100%);
+        }
+
+        .main-wrapper {
+            position: relative;
+            width: 90%;
+            max-width: 850px;
+            padding: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(15px);
+            border-radius: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 45px rgba(255, 100, 130, 0.15);
+        }
+
+        .side-title {
+            position: absolute;
+            left: 10px;
+            bottom: 20px;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            font-size: 50px;
+            font-weight: 900;
+            color: rgba(216, 27, 96, 0.05);
+            user-select: none;
+        }
+
+        .left-content {
+            flex: 1;
+            min-width: 300px;
+            z-index: 2;
+        }
+
+        .right-content {
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 35px;
+            color: #d81b60;
+            text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+        }
+
+        .tagline {
+            display: inline-block;
+            margin-bottom: 25px;
+            padding: 5px 20px;
+            background: #ff4d6d;
+            color: #fff;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .desc {
+            margin-bottom: 25px;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .info-link {
+            display: block;
+            padding: 15px 20px;
+            background: #fff;
+            color: #d81b60;
+            text-decoration: none;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 194, 209, 0.5);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.02);
+            transition: 0.3s;
+        }
+
+        .info-link:hover {
+            background: #fff5f7;
+            transform: translateX(10px);
+            border-color: #ff4d6d;
+        }
+
+        .info-link b {
+            display: block;
+            font-size: 11px;
+            margin-bottom: 2px;
+            text-transform: uppercase;
+            color: #ff4d6d;
+        }
+
+        /* ===== PHOTO STACK ===== */
+        .photo-stack {
+            position: relative;
+            width: 210px;
+            height: 270px;
+        }
+
+        .photo-stack img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 25px;
+            border: 6px solid #fff;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .photo-stack img:nth-child(1) { transform: rotate(-8deg); z-index: 3; }
+        .photo-stack img:nth-child(2) { transform: rotate(4deg); z-index: 2; }
+        .photo-stack img:nth-child(3) { transform: rotate(-4deg); z-index: 1; }
+
+        .photo-stack:hover img:nth-child(1) { transform: translate(-70px, -30px) rotate(-15deg); }
+        .photo-stack:hover img:nth-child(2) { transform: translate(70px, -15px) rotate(15deg); }
+        .photo-stack:hover img:nth-child(3) { transform: translate(-30px, 50px) rotate(-10deg); }
+
+        .back-home {
+            margin-top: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            color: #d81b60;
+            border: 2px solid #fff;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            background: #fff;
+            color: #ff4d6d;
+        }
+
+        .hint {
+            margin-top: 100px;
+            font-size: 13px;
+            color: #d81b60;
+            font-style: italic;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="main-wrapper">
+    <div class="side-title">VŨ THỊ DUYÊN</div>
+
+    <div class="left-content">
+        <p class="tagline">🌸 Thông tin cá nhân</p>
+        <h1>Vũ Thị Duyên</h1>
+        <p class="desc">Học sinh tại <b>Trường THPT Hòn Gai</b></p>
+
+        <div class="info-section">
+            <div class="info-link">
+                <b>Ngày sinh</b> 07/11/2008
+            </div>
+
+            <a href="https://vi.wikipedia.org/wiki/H%E1%BA%A3i_D%C6%B0%C6%A1ng_(t%E1%BB%89nh)" target="_blank" class="info-link">
+                <b>Quê quán</b> Hải Dương (Hải Phòng)
+            </a>
+
+            <a href="https://vi.wikipedia.org/wiki/Qu%E1%BA%A3ng_Ninh" target="_blank" class="info-link">
+                <b>Cư trú</b> Quảng Ninh
+            </a>
+
+            <a href="https://www.facebook.com/share/1B3uHKunRE/" target="_blank" class="info-link">
+                <b>Trường</b> THPT Hòn Gai
+            </a>
+
+            <a href="https://www.facebook.com/share/1Anhhvm7Gi/" target="_blank" class="info-link">
+                <b>Facebook</b> Kết nối với mình
+            </a>
+        </div>
+
+        <a href="index.html" class="back-home">← QUAY LẠI MENU</a>
+    </div>
+
+    <div class="right-content">
+        <div class="photo-stack">
+            <img src="https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2019/10/28/762649/Anh-6--Vong-Quay-Mat.jpg" alt="Ảnh 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Zar2F_vgvV9KtOjL9WdNSANl9yuY1xEjWg&s" alt="Ảnh 2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPbTKlWXHMUkujX6801w1u310E53PvPq1Mkg&s" alt="Ảnh 3">
+        </div>
+
+        <p class="hint">Rê chuột để xem ảnh ✨</p>
+    </div>
+</div>
+
+</body>
+</html>
