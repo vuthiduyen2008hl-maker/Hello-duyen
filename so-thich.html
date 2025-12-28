@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sở thích – Vũ Thị Duyên</title>
+
+    <style>
+        /* ===== BODY ===== */
+        body {
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-family: 'Segoe UI', sans-serif;
+            color: #444;
+            background: linear-gradient(180deg, #ffc2d1 0%, #ff99ac 100%);
+        }
+
+        /* ===== MAIN WRAPPER ===== */
+        .main-wrapper {
+            position: relative;
+            width: 95%;
+            max-width: 900px;
+            padding: 40px;
+
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(15px);
+            border-radius: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 20px 45px rgba(255, 100, 130, 0.15);
+        }
+
+        /* ===== SIDE TITLE ===== */
+        .side-title {
+            position: absolute;
+            left: 10px;
+            bottom: 20px;
+
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+
+            font-size: 50px;
+            font-weight: 900;
+            color: rgba(216, 27, 96, 0.05);
+            user-select: none;
+        }
+
+        /* ===== LEFT CONTENT ===== */
+        .left-content {
+            flex: 1;
+            min-width: 300px;
+            z-index: 2;
+        }
+
+        h1 {
+            margin: 5px 0 10px;
+            font-size: 35px;
+            color: #d81b60;
+            text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.5);
+        }
+
+        .tagline {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 6px 20px;
+
+            background: #ff4d6d;
+            color: #fff;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .desc {
+            margin-bottom: 25px;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+
+        .info-section {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .hobby-item {
+            padding: 15px 20px;
+            background: #fff;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 194, 209, 0.5);
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.02);
+            color: #d81b60;
+        }
+
+        .hobby-item b {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #ff4d6d;
+        }
+
+        .back-home {
+            margin-top: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+
+            color: #d81b60;
+            border: 2px solid #fff;
+            border-radius: 50px;
+            transition: 0.3s;
+        }
+
+        .back-home:hover {
+            background: #fff;
+            color: #ff4d6d;
+        }
+
+        /* ===== RIGHT CONTENT ===== */
+        .right-content {
+            flex: 1;
+            min-width: 320px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .playlist-title {
+            margin-bottom: 15px;
+            font-size: 14px;
+            font-weight: bold;
+            color: #d81b60;
+        }
+
+        /* ===== VIDEO LIST ===== */
+        .video-list {
+            width: 100%;
+            max-height: 480px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+
+        .video-list::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .video-list::-webkit-scrollbar-thumb {
+            background: #ffc2d1;
+            border-radius: 10px;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            height: 0;
+            margin-bottom: 20px;
+
+            overflow: hidden;
+            border-radius: 20px;
+            border: 5px solid #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .quote {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #d81b60;
+            font-style: italic;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="main-wrapper">
+    <div class="side-title">MY HOBBIES</div>
+
+    <div class="left-content">
+        <p class="tagline">❤️ Sở thích của mình</p>
+        <h1>Sở thích</h1>
+        <p class="desc">Khám phá những điều mình yêu thích ✨</p>
+
+        <div class="info-section">
+            <div class="hobby-item">
+                <b>🎬 Phim ảnh</b>
+                Thích xem phim hoạt hình, đặc biệt là <b>Oggy và những chú gián</b> và <b>Shin – Cậu bé bút chì</b> 🖍️
+            </div>
+
+            <div class="hobby-item">
+                <b>📖 Sách & truyện</b>
+                Đọc truyện (Manhwa, Manga, Tiểu thuyết…)
+            </div>
+
+            <div class="hobby-item">
+                <b>💤 Thư giãn</b>
+                NGỦ 💤 (Đam mê bất tận)
+            </div>
+
+            <div class="hobby-item">
+                <b>🎵 Âm nhạc</b>
+                Nghe nhạc: US-UK, Việt Nam, K-Pop, Lofi…
+            </div>
+        </div>
+
+        <a href="index.html" class="back-home">← QUAY LẠI MENU</a>
+    </div>
+
+    <div class="right-content">
+        <p class="playlist-title">Playlist của Duyên 🎵 (Cuộn để xem)</p>
+
+        <div class="video-list">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/57kytx5z5Po" allowfullscreen></iframe>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/46EjkkDo00g" allowfullscreen></iframe>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/JWeJHN5P-E8" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <p class="quote">"Âm nhạc là liều thuốc cho tâm hồn" ✨</p>
+    </div>
+</div>
+
+</body>
+  </html>
